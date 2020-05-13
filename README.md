@@ -1,6 +1,6 @@
 ># grupo9_metodologias
 >
->###Criterio de Done
+>Criterio de Done
 >
 > - Todos los bugs corregidos.
 > - Codigo revisado por al menos dos miembros del equipo
