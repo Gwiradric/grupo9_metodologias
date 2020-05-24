@@ -1,11 +1,13 @@
-Tere voto un 3:
+Votacion 1:
 
-Como era investigar nomas y no desarrollar deberia tener las instrucciones de uso
+Teresa voto un 3:
+Como era investigar nomas y no desarrollar deberia tener las instrucciones de uso.
 
 
----------------------------------------------------------------------
+----------------------------------------------------------------------------------------
 
-Fede voto un 20:
+Votacion 2:
 
-Hay que leer la documentacion y puede ser que haga falta tener conocimientos adicionales
+Federico voto un 20:
+Hay que leer la documentacion y puede ser que haga falta tener conocimientos adicionales.
 
