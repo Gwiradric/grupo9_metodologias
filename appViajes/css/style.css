@@ -22,6 +22,7 @@ ion-toolbar ion-title{
   align-items: center;
 }
 
-body {
-  background-color: black;
+:root {
+  --ion-background-color: #ffffff;
+
 }
