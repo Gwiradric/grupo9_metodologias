@@ -21,3 +21,8 @@ ion-toolbar ion-title{
   flex-direction: column;
   align-items: center;
 }
+
+:root {
+  --ion-background-color: #ffffff;
+
+}
