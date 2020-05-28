@@ -21,3 +21,10 @@ ion-toolbar ion-title{
   flex-direction: column;
   align-items: center;
 }
+
+
+.buttonLegend{
+  position: fixed;
+  bottom:20px;
+  right:20px;
+}
