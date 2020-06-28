@@ -17,6 +17,8 @@ function initPage() {
     }
   }
 
+  //deleteInfoServer();
+
   async function deleteInfoServer() {
     //this function is responsible for editing the information on the server
     try {
@@ -67,24 +69,24 @@ function initPage() {
   function obtenerDatosFormulario() {
     let viaje = {
       "thing": {
-        "hostelName": document.querySelector("#hostelName").value,
-        "address": document.querySelector("#address").value,
-        "inputCity": document.querySelector("#inputCity").value,
-        "inputZip": document.querySelector("#inputZip").value,
-        "hostelURL": document.querySelector("#hostelURL").value,
+        "nombre": document.querySelector("#hostelName").value,
+        "direccion": document.querySelector("#address").value,
+        "ciudad": document.querySelector("#inputCity").value,
+        "cp": document.querySelector("#inputZip").value,
+        "pagina": document.querySelector("#hostelURL").value,
         "email": document.querySelector("#email").value,
         "telefono": document.querySelector("#telefono").value,
-        "rooms": document.querySelector("#rooms").value,
-        "personas": document.querySelector("#personas").value,
-        "roomType": document.querySelector("#roomType").value,
+        "habitaciones": document.querySelector("#rooms").value,
+        "cantidadPersonas": document.querySelector("#personas").value,
+        "tipoHabitacion": document.querySelector("#roomType").value,
         "diaEntrada": document.querySelector("#diaEntrada").value,
         "diaSalida": document.querySelector("#diaSalida").value,
-        "yes": document.querySelector("#yes").value,
-        "no": document.querySelector("#no").value,
-        "desayuno": document.querySelector("#desayuno").value,
-        "limpieza": document.querySelector("#limpieza").value,
-        "coches": document.querySelector("#coches").value,
-        "estacionamiento": document.querySelector("#estacionamiento").value,
+        "checkIn": document.querySelector("#checkIn").value,
+        "checkOut": document.querySelector("#checkOut").value,
+        "desayuno": document.querySelector("#desayuno").checked,
+        "limpieza": document.querySelector("#limpieza").checked,
+        "coches": document.querySelector("#coches").checked,
+        "estacionamiento": document.querySelector("#estacionamiento").checked,
       }
     };
 
