@@ -48,3 +48,7 @@ ion-toolbar ion-title ion-avatar{
   padding: 5px;
   text-align: center;
 }
+
+a{
+  text-decoration: none;
+}
