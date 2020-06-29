@@ -4,8 +4,14 @@ function initPage() {
   "use strict";
 
   let url = "http://web-unicen.herokuapp.com/api/groups/400/tpe";
+  // URL es el link de la API
+
+  let button = document.querySelector("#submit");
+  button.addEventListener("click", obtenerDatosFormulario);
+  // Agrego un evento al boton Submit
 
   async function obtenerInfo() {
+    // Funcion para obtener la informacion de la API
     try {
       let recibido = await fetch(url); //getting the info from servidor
       let json = await recibido.json();//casting to json
@@ -20,14 +26,14 @@ function initPage() {
   //deleteInfoServer();
 
   async function deleteInfoServer() {
-    //this function is responsible for editing the information on the server
+    // Funcion para borrar toda la informacion de la API
     try {
 
       try {
         let recibido = await fetch(url); //getting the info from servidor
         let json = await recibido.json();//casting to json
 
-        for (let index = 0; index < json.tpe.length; index++) {
+        for (let index = 1; index < json.tpe.length; index++) {
           
           let id = json.tpe[index]._id;
           await fetch(url + "/" + id, {
@@ -48,7 +54,7 @@ function initPage() {
   }
 
   async function enviarInfo(viaje) {
-    //this function is responsible for saving the information on the server
+    // Funcion para enviar toda la informacion a la API
     try {
       await fetch(url, {
         "method": "POST",
@@ -63,12 +69,11 @@ function initPage() {
     }
   }
 
-  let button = document.querySelector("#submit");
-  button.addEventListener("click", obtenerDatosFormulario);
-
   function obtenerDatosFormulario() {
+    // Funcion para recopilar la informacion del formulario de planes
     let viaje = {
       "thing": {
+        "estado": 'Confirmado',
         "nombre": document.querySelector("#hostelName").value,
         "direccion": document.querySelector("#address").value,
         "ciudad": document.querySelector("#inputCity").value,
