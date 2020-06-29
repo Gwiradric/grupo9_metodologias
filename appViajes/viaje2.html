@@ -1,22 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/cargaPlanes.js"></script>
     <title></title>
   </head>
   <body>
+    <ionic-app>
+      <ionic-content>
     <ion-toolbar color = "success">
 
       <ion-title class="title">
           Tu Planes en Tandil Junio 2020
       </ion-title>
       </ion-toolbar>
+      
+      <div id="planes">
+
+      </div>
+    
     <ion-card>
       <ion-card-header>
-        <ion-card-title><span class="pre">Precargado</span> Piedra Movediza</ion-card-title>
+        <ion-card-title>Piedra Movediza</ion-card-title>
       </ion-card-header>
 
       <ion-card-content>
@@ -70,8 +79,8 @@
       </div>
     </div>
 
-    
-
+  </ionic-content>    
+  </ionic-app>
   </body>
   <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
   <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
