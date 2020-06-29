@@ -21,7 +21,7 @@ async function renderizar(json){
     let planess = json.tpe;
     let html = "";
     planess.forEach(plan => {
-        html += '<ion-card><ion-card-header><ion-card-title> Hotel: <a href="plan?+'+plan._id+'" >'+plan.thing.nombre+'</a></ion-card-title></ion-card-header>'+'<ion-card-content>';
+        html += '<ion-card><ion-card-header><ion-card-title> Hotel: <a href="plan.html?'+plan._id+'" >'+plan.thing.nombre+'</a></ion-card-title></ion-card-header>'+'<ion-card-content>';
         html += '<ion-label>Inicio: '+plan.thing.diaEntrada+'</ion-label></br>';
         html += '<ion-label>Fin: '+plan.thing.diaSalida+'</ion-label></br>';
         html += '<ion-text>Ubicación: '+plan.thing.ciudad+'</ion-text></ion-card-content></ion-card>';
