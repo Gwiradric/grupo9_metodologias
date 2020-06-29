@@ -23,11 +23,12 @@ function initPage() {
     }
   }
 
-  //deleteInfoServer();
+  deleteInfoServer();
 
   async function deleteInfoServer() {
     // Funcion para borrar toda la informacion de la API
     try {
+
 
       try {
         let recibido = await fetch(url); //getting the info from servidor
@@ -63,6 +64,7 @@ function initPage() {
         },
         "body": JSON.stringify(viaje),
       });
+      window.location.replace("viaje2.html");
     }
     catch (t) {
       console.log(t);

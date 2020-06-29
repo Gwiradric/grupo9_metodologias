@@ -10,7 +10,6 @@ async function obtenerInfo() {
         let recibido = await fetch(url); //getting the info from servidor
         let json = await recibido.json();//casting to json
         renderizar(json);
-        console.log(json);
     }
     catch (t) {
         console.log(t); 
@@ -28,4 +27,36 @@ async function renderizar(json){
     });
     document.getElementById('planes').innerHTML = html;
 }
+
+//deleteInfoServer();
+
+  async function deleteInfoServer() {
+    // Funcion para borrar toda la informacion de la API
+    try {
+
+      console.log('entro delete');
+
+      try {
+        let recibido = await fetch(url); //getting the info from servidor
+        let json = await recibido.json();//casting to json
+
+        for (let index = 1; index < json.tpe.length; index++) {
+          
+          let id = json.tpe[index]._id;
+          await fetch(url + "/" + id, {
+            "method": "DELETE",
+          });
+          
+        }
+      }
+      catch (t) {
+        console.log(t);
+      }
+
+      
+    }
+    catch (t) {
+      console.log(t);
+    }
+  }
 }
