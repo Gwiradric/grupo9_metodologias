@@ -6,9 +6,6 @@ function initPage() {
   let url = "http://web-unicen.herokuapp.com/api/groups/400/tpe";
   // URL es el link de la API
 
-  let button = document.querySelector("#submit");
-  button.addEventListener("click", obtenerDatosFormulario);
-  // Agrego un evento al boton Submit
 
   async function obtenerInfo() {
     // Funcion para obtener la informacion de la API
@@ -23,7 +20,7 @@ function initPage() {
     }
   }
 
-  deleteInfoServer();
+  //deleteInfoServer();
 
   async function deleteInfoServer() {
     // Funcion para borrar toda la informacion de la API
@@ -99,4 +96,38 @@ function initPage() {
 
     enviarInfo(viaje);
   }
+
+
+  function validar() {
+    let nombre, direccion, ciudad, cp, limpieza, pagina, email, telefono, habitaciones, cantidadPersonas, tipoHabitacion, diaEntrada, diaSalida, checkIn, checkOut, desayuno, coches, estacionamiento;
+    nombre = document.querySelector("#hostelName").value;
+    direccion = document.querySelector("#address").value;
+    ciudad = document.querySelector("#inputCity").value;
+    cp = document.querySelector("#inputZip").value;
+    pagina = document.querySelector("#hostelURL").value;
+    email = document.querySelector("#email").value;
+    telefono = document.querySelector("#telefono").value;
+    habitaciones = document.querySelector("#rooms").value;
+    cantidadPersonas = document.querySelector("#personas").value;
+    tipoHabitacion = document.querySelector("#roomType").value;
+    diaEntrada = document.querySelector("#diaEntrada").value;
+    diaSalida = document.querySelector("#diaSalida").value;
+    checkIn = document.querySelector("#checkIn").value;
+    checkOut = document.querySelector("#checkOut").value;
+    desayuno = document.querySelector("#desayuno").checked;
+    limpieza = document.querySelector("#limpieza").checked;
+    coches = document.querySelector("#coches").checked;
+    estacionamiento = document.querySelector("#estacionamiento").checked;
+  
+    if (nombre === "" || direccion === "" || ciudad === "" || cp === "" || email === "" || telefono === "") {
+      alert("Debes completar todos los campos obligatorios");
+    }
+    else {
+      alert("El formulario fue enviado correctamente");
+      obtenerDatosFormulario();
+    }
+  } 
+  
+  let button = document.querySelector("#submit");
+  button.addEventListener("click", validar );
 }
