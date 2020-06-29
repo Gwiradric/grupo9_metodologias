@@ -58,10 +58,30 @@ function initPage() {
             html += '<ion-label>Dia de salida: ' + plan.diaSalida + '</ion-label></br>';
             html += '<ion-label>Check-in: ' + plan.checkIn + '</ion-label></br>';
             html += '<ion-label>Check-out: ' + plan.checkOut + '</ion-label></br>';
-            html += '<ion-label>Dia de Desayuno: ' + plan.desayuno + '</ion-label></br>';
-            html += '<ion-label>Dia de Limpieza: ' + plan.limpieza + '</ion-label></br>';
-            html += '<ion-label>Dia de Coches: ' + plan.coches + '</ion-label></br>';
-            html += '<ion-label>Dia de Estacionamiento: ' + plan.estacionamiento + '</ion-label></br>';
+            if ( plan.desayuno==true){
+                html += '<ion-label>Dia de Desayuno: Sí </ion-label></br>';
+            }
+            if ( plan.desayuno==false){
+                html += '<ion-label>Dia de Desayuno: No </ion-label></br>';
+            }
+            if ( plan.limpieza==true){
+                html += '<ion-label>Dia de Limpieza: Sí </ion-label></br>';
+            }
+            if( plan.limpieza==false){
+                html += '<ion-label>Dia de Limpieza: No </ion-label></br>';
+            }
+            if ( plan.coches==true){
+                html += '<ion-label>Dia de Coches: Sí </ion-label></br>';
+            }
+            if ( plan.coches==false){
+                html += '<ion-label>Dia de Coches: No </ion-label></br>';
+            }
+            if ( plan.estacionamiento==true){
+                html += '<ion-label>Dia de Estacionamiento: Sí </ion-label></br>';
+            }
+            if ( plan.estacionamiento==false){
+                html += '<ion-label>Dia de Estacionamiento: No </ion-label></br>';
+            }
             html += '<ion-text>Ubicación: ' + plan.ciudad + '</ion-text></ion-card-content></ion-card>';
         document.getElementById('contenido').innerHTML = html;
     }
