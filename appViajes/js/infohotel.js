@@ -8,18 +8,6 @@ function initPage() {
 
     obtenerInfo();
 
-    function getQueryVariable(variable) {
-        var query = window.location.search.substring(1);
-        var vars = query.split("&");
-        for (var i = 0; i < vars.length; i++) {
-            var pair = vars[i].split("=");
-            if (pair[0] == variable) {
-                return pair[1];
-            }
-        }
-        return false;
-    }
-
     let botonBorrar = document.getElementById('borrar');
     botonBorrar.addEventListener('click', borrarPlan);
 
@@ -75,30 +63,30 @@ function initPage() {
         html += '<ion-label>Check-in: ' + plan.checkIn + '</ion-label></br>';
         html += '<ion-label>Check-out: ' + plan.checkOut + '</ion-label></br>';
         if (plan.desayuno == true) {
-            html += '<ion-label>Dia de Desayuno: Sí </ion-label></br>';
+            html += '<ion-label>Incluye Desayuno: Sí </ion-label></br>';
         }
         if (plan.desayuno == false) {
-            html += '<ion-label>Dia de Desayuno: No </ion-label></br>';
+            html += '<ion-label>Incluye Desayuno: No </ion-label></br>';
         }
         if (plan.limpieza == true) {
-            html += '<ion-label>Dia de Limpieza: Sí </ion-label></br>';
+            html += '<ion-label>Incluye Limpieza: Sí </ion-label></br>';
         }
         if (plan.limpieza == false) {
-            html += '<ion-label>Dia de Limpieza: No </ion-label></br>';
+            html += '<ion-label>Incluye Limpieza: No </ion-label></br>';
         }
         if (plan.coches == true) {
-            html += '<ion-label>Dia de Coches: Sí </ion-label></br>';
+            html += '<ion-label>Alquiler de coches: Sí </ion-label></br>';
         }
         if (plan.coches == false) {
-            html += '<ion-label>Dia de Coches: No </ion-label></br>';
+            html += '<ion-label>Alquiler de coches: No </ion-label></br>';
         }
         if (plan.estacionamiento == true) {
-            html += '<ion-label>Dia de Estacionamiento: Sí </ion-label></br>';
+            html += '<ion-label>Incluye estacionamiento: Sí </ion-label></br>';
         }
         if (plan.estacionamiento == false) {
-            html += '<ion-label>Dia de Estacionamiento: No </ion-label></br>';
+            html += '<ion-label>Incluye stacionamiento: No </ion-label></br>';
         }
-        html += '<ion-text>Ubicación: ' + plan.ciudad + '</ion-text></ion-card-content></ion-card>';
+        html += '</ion-card-content></ion-card>';
         document.getElementById('contenido').innerHTML = html;
     }
 }

@@ -12,15 +12,14 @@
     <script src="./js/ajax.js"></script>
 </head>
 
-<body>
-    <div class="container">
-        <header>
-            <nav class="navbar navbar-light bg-light">
-                <button type="button" class="btn btn-success"><a href="viaje2.html">Volver
-                    </a></button>
-                <span class="navbar-brand mb-0 h1 text-center">Nuevo Hospedaje</span>
-            </nav>
-        </header>
+<body class="bg-light">
+    <header>
+        <nav class="navbar navbar-dark bg-success">
+            <span class='text-white' id='volver'>Volver</span>
+            <span class="navbar-brand mb-0 h1 text-center">Nuevo Hospedaje</span>
+        </nav>
+    </header>
+    <div class="container mt-2">
         <form>
             <div class="form-group">
                 <label for="hostelName">Hotel</label>
@@ -33,15 +32,15 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputCity">Ciudad</label>
-                    <input type="text" class="form-control" id="inputCity">
+                    <input type="text" class="form-control" id="inputCity" placeholder="Nombre de ciudad">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="country">Pais</label>
-                    <input type="text" class="form-control" id="country">
+                    <input type="text" class="form-control" id="country" placeholder="Nombre del país">
                 </div>
                 <div class="form-group col-md-2">
                     <label for="inputZip">Codigo Postal</label>
-                    <input type="text" class="form-control" id="inputZip">
+                    <input type="text" class="form-control" id="inputZip" placeholder="Numero de codigo postal">
                 </div>
             </div>
             <div class="form-group">
@@ -70,11 +69,11 @@
             </div>
             <div class="form-group">
                 <label for="diaEntrada">Dia de Entrada</label>
-                <input type="date" class="form-control" id="diaEntrada" placeholder="">
+                <input type="date" class="form-control" id="diaEntrada" min='1899-01-01' placeholder="">
             </div>
             <div class="form-group">
                 <label for="diaSalida">Dia de salida</label>
-                <input type="date" class="form-control" id="diaSalida" placeholder="">
+                <input type="date" class="form-control" id="diaSalida" min='1899-01-01' placeholder="">
             </div>
             <div class="form-group">
                 <label for="checkIn">Check In</label>
@@ -112,11 +111,11 @@
                     </label>
                 </div>
             </div>
-            <div class="buttonNormal">
-                <input class="btn btn-primary" type="button" value="Agregar Plan" id="submit">
-            </div>
         </form>
 
+        <div class="buttonNormal">
+            <input class="btn btn-primary" type="button" value="Agregar hospedaje" id="submit">
+        </div>
 
     </div>
 
@@ -125,13 +124,13 @@
     <!--BOOTSTRAP-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
-    </script>
+        </script>
 </body>
 
 </html>

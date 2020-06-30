@@ -5,14 +5,14 @@ function initPage() {
 
   let url = "http://web-unicen.herokuapp.com/api/groups/400/tpe";
   // URL es el link de la API
-
+  fechaValida();
 
   async function obtenerInfo() {
     // Funcion para obtener la informacion de la API
     try {
       let recibido = await fetch(url); //getting the info from servidor
       let json = await recibido.json();//casting to json
-      
+
       console.log(json);
     }
     catch (t) {
@@ -32,19 +32,19 @@ function initPage() {
         let json = await recibido.json();//casting to json
 
         for (let index = 1; index < json.tpe.length; index++) {
-          
+
           let id = json.tpe[index]._id;
           await fetch(url + "/" + id, {
             "method": "DELETE",
           });
-          
+
         }
       }
       catch (t) {
         console.log(t);
       }
 
-      
+
     }
     catch (t) {
       console.log(t);
@@ -66,6 +66,30 @@ function initPage() {
     catch (t) {
       console.log(t);
     }
+  }
+
+  let volver = document.getElementById('volver');
+  volver.addEventListener('click', fnVolver);
+
+  function fnVolver() {
+    window.location.replace("viaje2.html");
+  }
+
+  function fechaValida() {
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+    var yyyy = today.getFullYear();
+    if (dd < 10) {
+      dd = '0' + dd
+    }
+    if (mm < 10) {
+      mm = '0' + mm
+    }
+
+    today = yyyy + '-' + mm + '-' + dd;
+    document.getElementById("diaEntrada").setAttribute("min", today);
+    document.getElementById("diaSalida").setAttribute("min", today);
   }
 
   function obtenerDatosFormulario() {
@@ -118,16 +142,22 @@ function initPage() {
     limpieza = document.querySelector("#limpieza").checked;
     coches = document.querySelector("#coches").checked;
     estacionamiento = document.querySelector("#estacionamiento").checked;
-  
+
     if (nombre === "" || direccion === "" || ciudad === "" || cp === "" || email === "" || telefono === "") {
       alert("Debes completar todos los campos obligatorios");
-    }
+    } 
     else {
-      alert("El formulario fue enviado correctamente");
-      obtenerDatosFormulario();
+      let diaSalida = document.getElementById('diaSalida').value;
+      let nuevaFecha = '2020-07-03';
+      if (diaSalida > nuevaFecha) {
+        alert('La fecha de salida excede la finalizacion del viaje');
+      } else {
+        alert("El formulario fue enviado correctamente");
+        obtenerDatosFormulario();
+      }
     }
-  } 
-  
+  }
+
   let button = document.querySelector("#submit");
-  button.addEventListener("click", validar );
+  button.addEventListener("click", validar);
 }
