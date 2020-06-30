@@ -12,7 +12,11 @@ ion-toolbar{
   margin-bottom: 2.5%;
 }
 
-ion-toolbar ion-title{
+ion-title {
+  text-align: center;
+  padding: 5px;
+}
+ion-toolbar ion-title ion-avatar{
   text-align: center;
 }
 
@@ -27,4 +31,24 @@ ion-toolbar ion-title{
   position: fixed;
   bottom:20px;
   right:20px;
+}
+
+.buttonNormal{
+  text-align: center;
+  bottom:20px;
+  right:20px;
+}
+
+.pre{
+  font-style: italic;
+}
+
+.avatar{
+  margin: auto;
+  padding: 5px;
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
 }
